@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Work</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html"><p>Home</p></a>
+            <a href="work.html"><p>Work</p></a>
+            <a href="edu.html"><p>Education</p></a>
+        </nav>
+    </header>
+
+    <div class="box-container">
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4" id="clickBox"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+    </div>
+
+    <div id="workplacesTable"></div>
+
+    <script>
+        // Fetch the JSON data
+        fetch('work.json')
+            .then(response => response.json()) // Parse the JSON response
+            .then(data => { // Handle the parsed JSON data
+                // Generate HTML table
+                const workplacesTable = document.getElementById('workplacesTable'); // Get the div element by its ID
+                const table = document.createElement('table'); // Create a new table element
+                table.classList.add('workplaces-table'); // Add CSS class to the table
+
+                // Create table header
+                const headerRow = document.createElement('tr'); // Create a new row for table header
+                headerRow.innerHTML = `<th>Workplace</th><th>Start Year</th><th>End Year</th>`; // Set the inner HTML for the header row
+                table.appendChild(headerRow); // Append the header row to the table
+
+                // Iterate over each object in the JSON data array to create table rows
+                data.forEach(workplace => {
+                    const row = document.createElement('tr'); // Create a new row for each workplace
+                    row.innerHTML = `<td>${workplace.Workplace}</td><td>${workplace.StartYear}</td><td>${workplace.EndYear}</td>`; // Set the inner HTML for the row
+                    table.appendChild(row); // Append the row to the table
+                });
+
+                // Append the table to the workplacesTable div
+                workplacesTable.appendChild(table);
+            })
+            .catch(error => console.error('Error fetching JSON:', error)); // Handle any errors that occur during the fetch operation
+    </script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

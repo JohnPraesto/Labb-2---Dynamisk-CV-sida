@@ -1,0 +1,27 @@
+[
+    {
+        "Workplace": "McDonalds",
+        "StartYear": 2009,
+        "EndYear": 2012
+    },
+    {
+        "Workplace": "Herrljunga Hemtjänst",
+        "StartYear": 2014,
+        "EndYear": 2016
+    },
+    {
+        "Workplace": "Varbergs Hemtjänst",
+        "StartYear": 2016,
+        "EndYear": 2018
+    },
+    {
+        "Workplace": "PostNord",
+        "StartYear": 2018,
+        "EndYear": 2018
+    },
+    {
+        "Workplace": "Kriminalvården",
+        "StartYear": 2018,
+        "EndYear": 2023
+    }
+]

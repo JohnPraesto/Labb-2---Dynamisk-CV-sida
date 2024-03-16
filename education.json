@@ -1,0 +1,26 @@
+[
+    {
+        "School": "IT-gymnasiet",
+        "Field": "IT, network, graphic design",
+        "StartYear": 2005,
+        "EndYear": 2008
+    },
+    {
+        "School": "Umeå University",
+        "Field": "Philosophy & social science",
+        "StartYear": 2012,
+        "EndYear": 2016
+    },
+    {
+        "School": "Försvarsmakten",
+        "Field": "Basic military education",
+        "StartYear": 2016,
+        "EndYear": 2017
+    },
+    {
+        "School": "Campus Varberg",
+        "Field": "Software development .NET",
+        "StartYear": 2023,
+        "EndYear": 2025
+    }
+]
